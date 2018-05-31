@@ -1,0 +1,71 @@
+<div class="container-fluid">
+
+	<div class="row" id="title">
+		<div class="col-sm-12 divCenter">
+			<h1> SMOOSS</h1>
+			<h6>Bienvenue sur Smooss</h6>
+		</div>
+	</div>
+
+	<div class="row justify-content-center" id="middle_blocks">
+
+		<div class="clip-block">
+			<a [routerLink]="['/events']">
+				<div class="clip-each clip-solid">
+					<div class="clip-caption">
+						<i class="fas fa-5x fa-envelope" style="color: #fff;"></i>
+					</div>
+					<div class="social-share-block">
+						<span class="social-each">
+							<strong>4 </strong>
+						</span>
+						<span>
+							<i class="fas fa-1x fa-envelope"></i>
+						</span>
+					</div>
+				</div>
+			</a>
+		</div>
+
+		<div class="clip-block">
+			<a [routerLink]="['/profile']" class="clip-each clip-gradient">
+				<div class="clip-caption">
+					<i class="fas fa-2x fa-user"></i>
+				</div>
+			</a>
+		</div>
+
+		<div class="clip-block">
+			<a [routerLink]="['/event/create']">
+				<div class="clip-each clip-solid">
+					<div class="clip-caption">
+						<i class="fal fa-4x far fa-calendar-alt"></i>
+					</div>
+					<div class="social-share-block">
+						<span class="social-each"></span>
+						<span>
+							<i class="fas fa-plus"></i>
+						</span>
+					</div>
+				</div>
+			</a>
+		</div>
+	</div>
+
+	<svg class="clip-svg">
+		<defs>
+			<clipPath id="hexagon-clip" clipPathUnits="objectBoundingBox">
+				<polygon points="0.25 0.05, 0.75 0.05, 1 0.5, 0.75 0.95, 0.25 0.95, 0 0.5" />
+			</clipPath>
+		</defs>
+	</svg>
+
+	<svg class="clip-svg">
+		<defs>
+			<clipPath id="triangle-clip" clipPathUnits="objectBoundingBox">
+				<polygon points="1 0.03, 0.17 1, 1 1" />
+			</clipPath>
+		</defs>
+	</svg>
+
+</div>

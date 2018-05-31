@@ -1,0 +1,18 @@
+#navbar_index {
+    background-color                        : black !important;
+}
+#navbar_index a {
+    color                                   : #FCA311;
+}
+#logo_home {
+    font-weight                             : bold;
+    font-size                               : 25px;
+    margin-left                             : 3%;
+}
+.link_style a{
+    cursor                                  : pointer;
+}
+.link_style a:hover{
+    border-bottom                           : 1px solid white;
+    color                                   : #E5E5E5 !important;
+}

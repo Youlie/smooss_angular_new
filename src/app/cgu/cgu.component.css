@@ -1,0 +1,9 @@
+.footer {
+    position: unset;
+    bottom: 0%;
+    color : #FCA311;
+    background-color : black;
+}
+#linkFooter{
+    color : #FCA311; 
+}

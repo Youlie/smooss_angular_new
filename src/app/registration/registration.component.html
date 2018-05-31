@@ -1,0 +1,48 @@
+<!-- TODO
+importer cdn pour les icones? -->
+
+<div class="formRegistrationSignIn" [ngClass]='{ "submitted-form": hasBeenSubmitted }'>
+
+
+<h1 class="text-center">Inscription</h1>
+
+<form
+	[formGroup]="userForm"
+	(ngSubmit)= "soumetUserForm(userForm.value)">
+
+<div *ngIf="userForm.controls.lastname.errors" class="errors">Nom : requis</div>
+<i class="fas fa-user"></i><input type="text" name="lastName" placeholder="Nom" formControlName="lastname" ><br>
+
+<div *ngIf="userForm.controls.firstname.errors" class="errors">Prénom : requis</div>
+<i class="fas fa-user"></i><input type="text" name="firstName" placeholder="Prénom" formControlName="firstname"><br>
+
+<i class="fas fa-user"></i><input type="text" name="nickName" placeholder="Pseudo" formControlName="nickname"><br>
+
+<div *ngIf="userForm.controls.email.errors?.required" class="errors">Adresse mail : requise </div>
+<div *ngIf="userForm.controls.email.errors?.email" class="errors">Adresse mail : incorrecte </div>
+<i class="fas fa-at"></i><input type="text" name="email" placeholder="Adresse mail" formControlName="email"><br>
+
+<div *ngIf="userForm.controls.password.errors?.required" class="errors">Mot de passe : requis</div>
+<div *ngIf="userForm.controls.password.errors?.minlength" class="errors">Le Mot de passe doit contenir au minimum 9 caracteres</div>
+<i class="fas fa-lock"></i><input type="password" name="password" placeholder="Mot de Passe" formControlName="password"><br>
+
+<div *ngIf="userForm.controls.passwordconf.errors?.required" class="errors">Confirmation mot de passe : requise</div>
+<div *ngIf="userForm.controls.passwordconf.errors?.comparaisonPassword" class="errors">Les deux Mots de passe ne correspondent pas</div>
+<i class="fas fa-lock"></i><input type="password" name="passwordConf" placeholder="Confirmation mot de passe" formControlName="passwordconf"><br>
+<br>
+
+<div *ngIf="!userForm.controls.checkBoxCGU.value" class="errors">Veuillez accepter les CGU</div>
+<div class="form-group" style="text-align: center;">
+		<input type="checkbox" name="checkBoxCGU" formControlName="checkBoxCGU">
+		<a href="cgu.view" style="padding: 10px;">J'ai lu et j'accèpte
+			les Conditions Générales d'Utilisation</a>
+</div>
+
+<br>
+<!-- <button type="submit" class="button-submit" >S'inscrire</button> -->
+<button type="submit" class="button-submit">S'inscrire</button>
+
+
+</form>
+
+</div>

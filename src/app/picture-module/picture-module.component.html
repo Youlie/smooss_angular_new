@@ -1,0 +1,8 @@
+<li *ngFor="let picture of sourceImg">    
+  <div>
+    <h3>{{picture.name}}</h3>
+    <h4>{{picture.description}}</h4>
+    <img [src]="'data:image/svg+xml;base64,'+picture"/>
+  </div>
+</li>
+<p>Mais oui.</p>

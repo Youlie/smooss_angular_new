@@ -1,0 +1,13 @@
+.footer  {
+    position: unset;
+    left: 0;
+    bottom: 0%;
+    width: 100%;
+    color                                   : #FCA311;
+    background-color                        : black;
+    text-align: center;
+}
+
+#linkFooter{
+    color : #FCA311; 
+}

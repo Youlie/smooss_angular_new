@@ -1,0 +1,44 @@
+<!-- partie rachid >> -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark"
+			id="navbar_index">
+			<a class="navbar-brand" href="index.jsp" id="logo_home">Smooss</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse"
+				data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup"
+				aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse justify-content-end"
+				id="navbarNavAltMarkup">
+        <div class="navbar-nav mr-5 link_style">
+         
+            <div *ngIf="this.router.url === '/connexion' || 
+            this.router.url === '/registration' ">
+            <a class="nav-item nav-link">Connexion</a> 
+            <a class="nav-item nav-link">Inscription</a></div>
+          </div>
+			</div>
+		</nav>
+
+<!-- partie rachid fin -->
+
+<div *ngIf="this.router.url === '/welcome'"> 
+  Header Index
+</div>
+
+<div *ngIf="this.router.url === '/connexion' || 
+            this.router.url === '/registration' ">
+  Header Connexion / Inscription
+</div>
+
+<div *ngIf="this.router.url === '/home'">
+  <app-logout></app-logout>
+</div>
+
+<div *ngIf="this.router.url === '/profile' ||
+            this.router.url === '/events'  ||
+            this.router.url === '/event/*' 
+      ">
+  <app-logout></app-logout>
+  <app-home-redirect></app-home-redirect>
+  Header Modif / Crea / Event / Liste D'évent / profil
+</div>
