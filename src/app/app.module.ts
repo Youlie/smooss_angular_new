@@ -18,7 +18,8 @@ import { LogoutComponent } from './logout/logout.component';
 import { HomeRedirectComponent } from './home-redirect/home-redirect.component';
 import { PictureModuleComponent } from './picture-module/picture-module.component';
 import { CguComponent } from './cgu/cgu.component';
-import { CarPoolingComponent } from './car-pooling/car-pooling.component'
+import { CarPoolingComponent } from './car-pooling/car-pooling.component';
+import { ModuleCardComponent } from './module-card/module-card.component';
 
 
 const appRoutes:Routes = [
@@ -53,6 +54,7 @@ const appRoutes:Routes = [
     PictureModuleComponent,
     CguComponent,
     CarPoolingComponent,
+    ModuleCardComponent
   ],
   imports: [
     BrowserModule,
