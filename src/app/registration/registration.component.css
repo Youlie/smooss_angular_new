@@ -16,7 +16,7 @@ body {
 .errors {
 	display: none;
 }
-
+/* <<< il y est deux fois non ? */
 
 .submitted-form .errors {
 	display: block;
@@ -28,6 +28,7 @@ body {
 	font-style: italic;
 	/* font-weight: bold; */
 }
+/* <<< il y est deux fois non ? */
 
 .formRegistrationSignIn {
 	color : #1ab188;

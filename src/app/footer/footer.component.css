@@ -1,13 +1,18 @@
 .footer  {
-    position: unset;
-    left: 0;
-    bottom: 0%;
-    width: 100%;
+    /* position: unset; */
+    /* left: 0; */
+    
+    width                                   : 100%; 
     color                                   : #FCA311;
-    background-color                        : black;
-    text-align: center;
+    background-color                        : black; 
+    text-align                              : center;
+    bottom                                  : 0;
+    position                                : fixed;
+    height                                  : 3%;
+    margin-top                              :0;
+
 }
 
 #linkFooter{
-    color : #FCA311; 
+    color                                   : #FCA311; 
 }
