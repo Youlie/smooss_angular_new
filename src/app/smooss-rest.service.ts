@@ -12,6 +12,8 @@ export class SmoossRestService {
 
   getProfile(id: number) {
     return this.http.get(this.SERVER_URL + "profile/user/" + id);
+    // TODO : lors de l'authentification, on pourra enlever le user/id et taper ainsi:
+//    return this.http.get(this.SERVER_URL + '/profile');
   }
   getlistEventsByUserId(id: number) {
     return this.http.get(this.SERVER_URL2 + "/events/user/" + id);
@@ -34,4 +36,30 @@ export class SmoossRestService {
     };
     return this.http.post(this.SERVER_URL + "profile/user/update", param, httpOptions);
   }
+
+  createNewUser(lastnameEntry, firstnameEntry, nicknameEntry, emailEntry, passwordEntry, pictureEntry) {
+    let param = JSON.stringify(
+      {
+        email: emailEntry,
+        password: passwordEntry,
+        firstName: firstnameEntry,
+        lastName: lastnameEntry,
+        nickName: nicknameEntry
+      }
+    );
+    console.log(param);
+
+    const httpOptions = {
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json'
+      })
+    };
+
+    return this.http.post(this.SERVER_URL2 + "/user/create", param, httpOptions);
+  }
+
+  getSingleEvent(id: number) {
+    return this.http.get(this.SERVER_URL2 + "/events/" + id);
+  }
+
 }

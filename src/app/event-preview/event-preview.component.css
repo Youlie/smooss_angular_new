@@ -2,7 +2,7 @@
     position : relative;
     height: 450px;
     width: 900px;
-    margin : 200px auto; 
+    margin : 50px auto; 
     background-color : #FFF;
     -webkit-box-shadow: 10px 10px 93px 0px rgba(0,0,0,0.75);
     -moz-box-shadow: 10px 10px 93px 0px rgba(0,0,0,0.75);
@@ -48,12 +48,14 @@
     position: absolute;
     left: 270px;
     bottom: 55px;
+    color: #C3C3C3;
 }
     .button-card {
         margin-right: 40px;
     }
     .button-card:hover {
         cursor : pointer;
+        color : black;
     }
 
 .card-right-side {
@@ -82,103 +84,10 @@
         position: absolute;
         bottom :   0px;
         right: 15px;
+        color: black;
     }
         .card-participant-number-event {
             color: red;
             font-weight: bold;
         }
 
-        .preview-card {
-            position : relative;
-            height: 450px;
-            width: 900px;
-            margin : 50px auto; 
-            background-color : #FFF;
-            -webkit-box-shadow: 10px 10px 93px 0px rgba(0,0,0,0.75);
-            -moz-box-shadow: 10px 10px 93px 0px rgba(0,0,0,0.75);
-            box-shadow: 10px 10px 93px 0px rgba(0,0,0,0.75);
-        }
-        .card-thumbnail {
-            float : left;
-            position : relative;
-            left : 30px;
-            top : -30px;
-            height : 320px;
-            width : 530px;
-            -webkit-box-shadow: 10px 10px 60px 0px rgba(0,0,0,0.75);
-            -moz-box-shadow: 10px 10px 60px 0px rgba(0,0,0,0.75);
-            box-shadow: 10px 10px 60px 0px rgba(0,0,0,0.75);
-            overflow: hidden;
-        }
-        .card-left-side {
-            position: absolute;
-            left: 50%;
-            top: 50%;
-            height: auto;
-            width: 100%;
-            -webkit-transform: translate(-50%,-50%);
-            -ms-transform: translate(-50%,-50%);
-            transform: translate(-50%,-50%);
-        }
-        .card-day-event {
-            position : absolute;
-            left : 30px;
-            bottom : 10px;
-            font-size : 6rem;
-            color : #C3C3C3;
-        }
-        .card-month-event {
-            position : absolute;
-            left : 30px;
-            bottom : 0px;
-            font-size : 2rem;
-            color : #C3C3C3;
-        } 
-        .buttons-card {
-            position: absolute;
-            left: 270px;
-            bottom: 55px;
-            color: #C3C3C3;
-        }
-            .button-card {
-                margin-right: 40px;
-            }
-            .button-card:hover {
-                cursor : pointer;
-                color : black;
-            }
-        
-        .card-right-side {
-            margin-left : 590px;
-            margin-right : 20px;
-        }
-            .card-title-event {
-                padding-top : 15px;
-                font-size : 1.7rem;
-                color : #4B4B4B;
-            }
-           
-            .card-separator {
-                margin-top : 10px;
-                border : 1px solid #C3C3C3;
-            }
-        
-            .card-description-event {
-                text-align: justify;
-                padding-top : 10px;
-                font-size : 0.95rem;
-                line-height: 150%;
-                color : #4B4B4B;
-            }
-            .card-participant-event {
-                position: absolute;
-                bottom :   0px;
-                right: 15px;
-                color: black;
-            }
-                .card-participant-number-event {
-                    color: red;
-                    font-weight: bold;
-                }
-        
-        
