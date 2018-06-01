@@ -1,6 +1,4 @@
-<form [formGroup]="formulaire"
-		#monFormulaire="ngForm"
-		(ngSubmit)="setForm(monFormulaire.value)">
+<form [formGroup]="formulaire" #monFormulaire="ngForm" (ngSubmit)="setForm(monFormulaire.value)">
 	<div class="container-fluid">
 		<!-- <div class="row" id="disconnect_button">
 			</div> -->
@@ -33,10 +31,12 @@
 
 					<img class="card-img-top img-thumbnail img-card" src="./src/assets/img/photo_de_profil.png" alt="Card image cap">
 					<!-- @Cynthia -->
-
-					<input type="file" name="file" accept="image/*">
+					<div class="styled-input wide">
+						<input type="file" name="file" accept="image/*" style="background-color: black;" required>
+						<label class="custom-file-upload"></label>
+					</div>
 					<br>
-					<input type="submit" value="Upload File">
+					<div type="submit" value="Upload File" class="btn-lrg submit-btn">Valider</div>
 					<br>
 
 					<!-- @Cynthia -->
