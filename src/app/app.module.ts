@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, LOCALE_ID } from '@angular/core';
 import { RouterModule, Routes} from '@angular/router';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
@@ -18,6 +18,8 @@ import { LogoutComponent } from './logout/logout.component';
 import { HomeRedirectComponent } from './home-redirect/home-redirect.component';
 import { PictureModuleComponent } from './picture-module/picture-module.component';
 import { CguComponent } from './cgu/cgu.component';
+import { CarPoolingComponent } from './car-pooling/car-pooling.component';
+import { ModuleCardComponent } from './module-card/module-card.component';
 
 
 const appRoutes:Routes = [
@@ -28,7 +30,11 @@ const appRoutes:Routes = [
   { path:"event/create", component:EventEditorComponent },
   { path:"event/:id/edit", component:EventEditorComponent },
   { path:"event/:id", component:EventDetailComponent },
+  {path:"cgu",component:CguComponent},
+  {path:"carpooling", component:CarPoolingComponent},
+  {path:"pictureModule",component:PictureModuleComponent},
   { path:"", pathMatch:'full', redirectTo:"home" }
+  
 ]
 
 @NgModule({
@@ -46,7 +52,9 @@ const appRoutes:Routes = [
     LogoutComponent,
     HomeRedirectComponent,
     PictureModuleComponent,
-    CguComponent
+    CguComponent,
+    CarPoolingComponent,
+    ModuleCardComponent
   ],
   imports: [
     BrowserModule,
@@ -54,7 +62,11 @@ const appRoutes:Routes = [
     HttpClientModule,
     RouterModule.forRoot(appRoutes)
   ],
-  providers: [],
+  providers: [
+    { 
+      provide : LOCALE_ID, useValue: "fr-FR"
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

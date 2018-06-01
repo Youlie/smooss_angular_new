@@ -1,3 +1,56 @@
-<p>
-  event-detail works!
-</p>
+<div class="container-fluid event-container">
+  <div class="header-event">
+    <img class="img-event justify-content-center" src="https://cdn2.hubspot.net/hubfs/322787/Mychefcom/images/BLOG/Header-Blog/photo-culinaire-pexels.jpg">
+    
+    <div class="title-event">{{titleEvent}}</div>
+
+    <div class="description-event">
+      <i class="fas fa-quote-left fa-2x quote-left-description-event"></i>
+      <p class="paragraph-description-event">
+        {{paragraphDescriptionEvent}}
+      </p>
+      <i class="fas fa-quote-right fa-2x quote-right-description-event"></i>
+    </div>
+
+    <div class="attribute-event">
+      <table>
+        <tbody>
+          <td class="text-right" id="attributes-event">
+            <tr><span class="attributes-event">{{nbParticipantsEvent}} </span></tr>
+            <tr><span class="attributes-event">{{authorEvent}}</span></tr>
+            <tr><span class="attributes-event">{{dateStartEvent * 1000 | date : 'shortTime'}} -- {{dateEndEvent * 1000 | date : 'shortTime'}}</span></tr>
+            <tr><span class="attributes-event">{{dateStartEvent * 1000 | date : 'mediumDate' }} -- {{dateEndEvent * 1000 | date : 'mediumDate'}}</span></tr>
+          </td>          
+          <td class="text-center ">
+            <tr><span class="fontawesome-event"><i class="fas fa-users fa-2x"></i></span></tr>
+            <tr><span class="fontawesome-event"><i class="fas fa-user-astronaut fa-2x"></i></span></tr>
+            <tr><span class="fontawesome-event"><i class="fas fa-clock fa-2x"></i></span></tr>
+            <tr><span class="fontawesome-event"><i class="fas fa-calendar-alt fa-2x"></i></span></tr>
+          </td>
+        </tbody>
+      </table>
+    </div>
+    <div class="modules-card">
+      <app-module-card></app-module-card>
+    </div>
+    <div class="map-event" #gmap></div>
+
+  </div>
+  
+  
+  <!-- <h5 class="card-day-event"> {{dayEvent}}</h5>
+  
+  <h6 class="card-month-event">{{monthEvent}}</h6>
+  
+  
+  <div class="card-right-side">
+    <h1 class="card-title-event">{{titleEvent}}</h1>
+
+    <p class="card-description-event">{{descriptionEvent}}</p>
+    <div class="card-participant-event">
+          <span *ngIf="participantEvent >= 2">Nb. participants : </span>
+          <span *ngIf="participantEvent == 1">Nb. participant : </span>
+          <span class="card-participant-number-event"> {{participantEvent}}</span></div>
+  </div>  -->
+
+</div>

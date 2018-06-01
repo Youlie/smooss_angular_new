@@ -1,0 +1,76 @@
+#titlePictureModule{
+    text-align: center;
+    color : #FCA311;
+}
+
+.gallery {
+    position: relative;
+    z-index: 1;
+    padding: 10px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-flow: row wrap;
+    flex-flow: row wrap;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+  }
+ 
+
+img {
+  display: block;
+  border-radius: 10px;
+
+}
+
+.gallery figure {
+    -ms-flex-preferred-size: 33.333%;
+        flex-basis: 33.333%;
+    padding: 10px;
+
+  }
+
+.gallery figure img {
+    width: 100%;
+    -webkit-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+  }
+
+
+
+/*     */
+
+
+figure 
+{
+  position: absolute;
+  z-index: 1;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+ transition: all 0.7s ease;
+ transition: all 1s ease;
+  position: relative;
+}
+
+
+/* Effect zoom picture */
+figure:hover
+{
+  transform:none;
+ 
+}
+
+figure:focus
+{
+  outline: none;
+  transform: rotate(0deg) scale(2); 
+  z-index: 9999;
+}
+
+
+

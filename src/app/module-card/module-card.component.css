@@ -1,0 +1,16 @@
+.fontawesome-card {
+    text-align: center;
+    background-color: rgba(0,205,173);
+    padding: 10px;
+}
+.separator-card {
+    width: 100%;
+    border: 1px dotted grey;
+    opacity: 0.1;
+}
+.card {
+    border: none !important;
+}
+.card-title {
+    color: black;
+}
