@@ -73,32 +73,4 @@ AskForNewUser() {
 
 }
 
-// AskForNewUser() {
-//   this.SmoossRestService.createNewUser(lastname, firstname, nickname, email, password).subscribe()
-// }
-
-// @PostMapping(value="/registration")
-// 	public String registration(("userForm"))
-// 			throws EmailException {
-
-// 		userValidator.validate(userForm, bindingResult);
-		
-// 		if (bindingResult.hasErrors()) {
-// 			return "registration";
-// 		}
-		
-// 		us.create(userForm);
-// 		es.sendMail(userForm.getEmail(), "contact@smooss.fr", "Bonjour "+userForm.getFirstName()+" !", "Bienvenue sur Smooss "+userForm.getFirstName()+
-// 				" ! Nous sommes heureux de vous compter parmi nos membres ! A très vite sur www.smooss.fr");
-
-// 		//TODO auto login !!!
-// 		return "redirect:home";
-// 	}
-
-// fonctionCheck(valeurutile) {
-//     public get value(lastname, firstname, nickname, email, password) {
-//       return null;
-//     };
-//   }
-
 }
