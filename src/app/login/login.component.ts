@@ -18,9 +18,9 @@ export class LoginComponent implements OnInit {
   }
 
   ngOnInit() : void {
-    this.smoossRestService.getUserById(2).subscribe(res => {
-      this.resultat = res;
-    })
+    // this.smoossRestService.login.subscribe(res => {
+    //   this.resultat = res;
+    // })
     this.form = this.fb.group ({
       email : this.fb.control ('', [Validators.required, Validators.minLength(3)]),
       password : this.fb.control ('', [Validators.required, Validators.minLength(3)])
@@ -35,7 +35,7 @@ export class LoginComponent implements OnInit {
   }
 
   onSubmit(value){
-    this.smoossRestService.
+    this.smoossRestService.login(value.email, value.password).subscribe(res => {console.log(res)});
   }
 
 }
