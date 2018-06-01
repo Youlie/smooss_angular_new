@@ -7,15 +7,34 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 export class SmoossRestService {
     constructor(private http: HttpClient) { }
 
-  private SERVER_URL = 'http://localhost:8080/SpringSmooss/api';
-  private SERVER_URL2 = 'http://localhost:8080/SpringSmooss';
+  private SERVER_URL = 'http://localhost:8080/SpringSmooss/';
+  private SERVER_URL2 = 'http://localhost:8080/websmoossspring'
 
-  getProfile() {
-    return this.http.get(this.SERVER_URL + '/profile');
+  getProfile(id: number) {
+    return this.http.get(this.SERVER_URL + "profile/user/" + id);
+    // TODO : lors de l'authentification, on pourra enlever le user/id et taper ainsi:
+//    return this.http.get(this.SERVER_URL + '/profile');
   }
-
   getlistEventsByUserId(id: number) {
     return this.http.get(this.SERVER_URL2 + "/events/user/" + id);
+  }
+  setProfile(id, email, firstName, lastName, nickName) {
+    let param = JSON.stringify({
+      id: id,
+      email: email,
+      firstName: firstName,
+      lastName: lastName,
+      nickName: nickName,
+    }
+    );
+    console.log(param);
+
+    const httpOptions = {
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json'
+      })
+    };
+    return this.http.post(this.SERVER_URL + "profile/user/update", param, httpOptions);
   }
 
   createNewUser(lastnameEntry, firstnameEntry, nicknameEntry, emailEntry, passwordEntry, pictureEntry) {
