@@ -13,17 +13,13 @@ body {
     text-align: center;
 }
 
-.errors {
-	display: none;
-}
-
 
 .submitted-form .errors {
 	display: block;
 }
 
-
 .errors {
+	display: none;
 	color: red;
 	font-style: italic;
 	/* font-weight: bold; */

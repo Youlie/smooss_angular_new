@@ -1,6 +1,6 @@
 
 #linkFooter{
-    color : #FCA311; 
+    color                                   : #FCA311; 
 }
 
 .footer {
@@ -12,4 +12,5 @@
     text-align: center;
     height: 60px;
     line-height: 60px;
+    z-index: 1;
 }
