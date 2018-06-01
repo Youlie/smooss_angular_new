@@ -9,7 +9,7 @@ export class SmoossRestService {
   constructor(private http: HttpClient) { }
 
   private SERVER_URL = 'http://localhost:8080/SpringSmooss/';
-  private SERVER_URL2 = 'http://localhost:8080/websmoossspring'
+  private SERVER_URL2 = 'http://localhost:8080/websmoossspring';
 
   getProfile(id: number) {
     return this.http.get(this.SERVER_URL + "profile/user/" + id);
@@ -94,5 +94,19 @@ export class SmoossRestService {
   getSingleEvent(id: number) {
     return this.http.get(this.SERVER_URL2 + "/events/" + id);
   }
+  login(email, password) {
+    let json = JSON.stringify({
+      email: email,
+      password: password
+    })
 
+    const httpOptions = {
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json'
+      })
+    };
+
+    console.log(json);
+    return this.http.post(this.SERVER_URL + '/user/login', json, httpOptions);
+  }
 }
