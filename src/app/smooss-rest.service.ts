@@ -9,8 +9,7 @@ export class SmoossRestService {
   constructor(private http: HttpClient) { }
 
   private SERVER_URL = 'http://localhost:8080/SpringSmooss/';
-  private SERVER_URL2 = 'http://localhost:8080/websmoossspring'
-  private SERVER_URL3 = 'http://localhost:8080/SpringSmooss';
+  private SERVER_URL2 = 'http://localhost:8080/websmoossspring';
 
   getProfile(id: number) {
     return this.http.get(this.SERVER_URL + "profile/user/" + id);
@@ -108,6 +107,6 @@ export class SmoossRestService {
     };
 
     console.log(json);
-    return this.http.post(this.SERVER_URL3 + '/user/login', json, httpOptions);
+    return this.http.post(this.SERVER_URL + '/user/login', json, httpOptions);
   }
 }
