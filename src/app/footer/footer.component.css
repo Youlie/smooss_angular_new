@@ -1,13 +1,16 @@
-.footer  {
-    position: unset;
-    left: 0;
-    bottom: 0%;
-    width: 100%;
-    color                                   : #FCA311;
-    background-color                        : black;
-    text-align: center;
-}
 
 #linkFooter{
     color : #FCA311; 
+}
+
+.footer {
+    background-color: rgb(6, 23, 44);
+    color : #FCA311;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    height: 60px;
+    line-height: 60px;
+    z-index: 1;
 }

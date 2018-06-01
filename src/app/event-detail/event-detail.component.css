@@ -1,0 +1,99 @@
+/* font-family: 'Roboto', sans-serif; */
+.event-container {
+    display: flex;
+    justify-content: center;
+}
+.header-event {
+    position:relative;
+    position : relative;
+    height: 450px;
+    width: 1400px;
+    margin-top : 50px; 
+    -webkit-box-shadow: 10px 10px 93px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 93px 0px rgba(0,0,0,0.75);
+    box-shadow: 10px 10px 93px 0px rgba(0,0,0,0.75);    
+}
+.img-event  {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;  
+}
+.title-event {
+    position: absolute;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    letter-spacing: 3px;
+    background-color: rgba(0,0,0, .8);
+    top: 50px;
+    font-size: 2em;
+    left: 230px;
+    width: 335px;
+    height: auto;
+    text-align: center;
+}
+.description-event {
+    position: absolute;
+    width: 600px;
+    height: 340px;
+    left: 100px;
+    bottom: -100px;
+    background-color: white;
+    color: black;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.2em;
+    border-radius: 2px;
+    text-align: justify;
+}
+    .quote-left-description-event {
+        position: absolute;
+        left: 30px;
+        top: 30px;
+
+    }
+    .paragraph-description-event {
+        left: 65px;
+        top: 80px;
+        right: 65px;
+        position: absolute;
+    }
+    .quote-right-description-event {
+        position: absolute;
+        right: 30px;
+        bottom: 30px;
+    }
+.attribute-event{
+    width: 350px;
+    height: 200px;
+    position: absolute;
+    right: 0px;
+    bottom: 10px;
+    text-align: right;
+}  
+    table tr {
+        line-height: 50px;
+        font-size: 1.1em;
+        font-weight: bold;
+        font-family: 'Roboto', sans-serif;
+    }
+        .attributes-event {
+            margin-right: 5px;
+            background-color: rgba(0,205,173);
+            border-radius: 25px;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+        .nb-participants-event {
+            margin-left: -5px;
+        }
+.map-event {
+    margin-top: 65px;
+    border-radius: 5px;
+}
+.modules-card {
+    margin-top: 150px;
+}

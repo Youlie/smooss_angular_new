@@ -18,6 +18,8 @@ import { LogoutComponent } from './logout/logout.component';
 import { HomeRedirectComponent } from './home-redirect/home-redirect.component';
 import { PictureModuleComponent } from './picture-module/picture-module.component';
 import { CguComponent } from './cgu/cgu.component';
+import { CarPoolingComponent } from './car-pooling/car-pooling.component';
+import { ModuleCardComponent } from './module-card/module-card.component';
 
 
 const appRoutes:Routes = [
@@ -28,7 +30,11 @@ const appRoutes:Routes = [
   { path:"event/create", component:EventEditorComponent },
   { path:"event/:id/edit", component:EventEditorComponent },
   { path:"event/:id", component:EventDetailComponent },
+  {path:"cgu",component:CguComponent},
+  {path:"carpooling", component:CarPoolingComponent},
+  {path:"pictureModule",component:PictureModuleComponent},
   { path:"", pathMatch:'full', redirectTo:"home" }
+  
 ]
 
 @NgModule({
@@ -46,7 +52,9 @@ const appRoutes:Routes = [
     LogoutComponent,
     HomeRedirectComponent,
     PictureModuleComponent,
-    CguComponent
+    CguComponent,
+    CarPoolingComponent,
+    ModuleCardComponent
   ],
   imports: [
     BrowserModule,
