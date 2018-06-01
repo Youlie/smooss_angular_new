@@ -93,6 +93,8 @@
 .map-event {
     margin-top: 65px;
     border-radius: 5px;
+    width:1400px; 
+    height:450px;  
 }
 .modules-card {
     margin-top: 150px;
