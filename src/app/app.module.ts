@@ -56,7 +56,6 @@ const appRoutes:Routes = [
     PictureModuleComponent,
     CguComponent,
     LoginComponent,
-    
     CarPoolingComponent,
     ModuleCardComponent
   ],
