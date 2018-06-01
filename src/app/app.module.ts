@@ -18,6 +18,7 @@ import { LogoutComponent } from './logout/logout.component';
 import { HomeRedirectComponent } from './home-redirect/home-redirect.component';
 import { PictureModuleComponent } from './picture-module/picture-module.component';
 import { CguComponent } from './cgu/cgu.component';
+import { LoginComponent } from './login/login.component';
 
 
 const appRoutes:Routes = [
@@ -28,6 +29,7 @@ const appRoutes:Routes = [
   { path:"event/create", component:EventEditorComponent },
   { path:"event/:id/edit", component:EventEditorComponent },
   { path:"event/:id", component:EventDetailComponent },
+  { path:"login", component:LoginComponent},
   { path:"", pathMatch:'full', redirectTo:"home" }
 ]
 
@@ -46,7 +48,9 @@ const appRoutes:Routes = [
     LogoutComponent,
     HomeRedirectComponent,
     PictureModuleComponent,
-    CguComponent
+    CguComponent,
+    LoginComponent,
+    
   ],
   imports: [
     BrowserModule,
