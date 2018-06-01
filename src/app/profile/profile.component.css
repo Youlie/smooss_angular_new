@@ -6,23 +6,16 @@ body {
 
     background-color        : rgb(0, 0, 0);
 
-    color                   : black !important;
+    color                   : #fff;
 
+    text-align              : center;
 
-}
-
-input:focus {
-    color 					: white !important;
 }
 
 p {
 
     margin                  : 0 0 10px 0;
 
-}
-
-.form-control {
-color : white !important;
 }
 
 .wrap {
@@ -195,6 +188,7 @@ a.clip-each:hover {
 
     height                  : 60px;
 
+    margin-top              : -457%;
 
 }
 
@@ -216,10 +210,141 @@ a.clip-each:hover {
 
 }
 
+@media only screen and (min-width: 550px) {
+
+.wrap {
+
+    display                 : table;
+
+    position                : absolute;
+
+    top                     : 50%;
+
+    left                    : 50%;
+
+    -ms-transform           : translateY(-50%) translateX(-50%);
+
+    -webkit-transform       : translateY(-50%) translateX(-50%);
+
+    transform               : translateY(-50%) translateX(-50%);
+
+}
+
+
+
+.clip-block {
+
+    display                 : table-cell;
+
+    vertical-align          : middle;
+
+}
+
+
+
+.clip-border {
+
+    margin-top              : 20px;
+
+}
+
+}
+
+#volet {
+
+    width                   : 180px;
+
+    padding                 : 10px;
+
+    background              : rgb(0, 0, 0);
+
+    text-align              : right;
+
+    color                   : #FFC107;
+
+    position                : relative;
+
+    left                    : -270px;
+
+    top                     : -207px;
+
+    -webkit-transition      : all .5s ease-in;
+
+    transition              : all .5s ease-in;
+
+}
+
+#volet a.ouvrir,
+
+#volet a.fermer {
+
+    padding                 : 5px 10px;
+
+    background              : #FFC107;
+
+    color                   : #fff;
+
+    text-decoration         : none;
+
+    position                : absolute;
+
+    right                   : -65px;
+
+    top                     : 10px;
+
+    /* quelques styles CSS3 */
+
+    -ms-transform           : rotate(270deg);
+
+    -moz-transform          : rotate(270deg);
+
+    -webkit-transform       : rotate(270deg);
+
+    transform               : rotate(270deg);
+
+    border-radius           : 0 0 8px 8px;
+
+}
+
+#disconnect {
+
+    color                   : #fff;
+
+}
+
+#volet:target {
+
+    left                    : 0;
+
+}
+
+#volet_clos:target #volet {
+
+    left                    : -223px;
+
+}
+
+#volet a.fermer {
+
+    display                 : none;
+
+}
+
+#volet:target a.ouvrir {
+
+    display                 : none;
+
+}
+
+#volet:target a.fermer {
+
+    display                 : block;
+
+}
 
 h4 {
 
-    margin-top              : 5%;
+    margin-top              : 12%;
 
     margin-bottom           : 5%;
 
@@ -233,12 +358,6 @@ h4 {
     align-items 			: center;
     flex-direction			: column;
 
-}
-
-.default-img-profile {
-    width 					: 150px;
-    height 					: auto;
-    margin-bottom 			: 10%;
 }
 
 .txtBlack {
@@ -255,10 +374,22 @@ h4 {
 
 .spaceInput {
 
-    margin                  : 1%;
+    margin                  : 0%;
 
     background              : black;
 
     border-color            : #FFC107;
+
+}
+.img-card{
+    height: 170px;
+}
+.card{
+    width: 55%;
+}
+
+.flex-container{
+    display: flex;
+    justify-content: center;
 
 }
