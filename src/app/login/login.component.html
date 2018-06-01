@@ -1,8 +1,18 @@
-<form [formGroup] = "form" novalidate (ngSubmit)= "save (form.value, form.valid)">
-  <input FormControlName = "email" placeholder="email"><br>
-  <input FormControlName = "password" placeholder="password"><br>
-  <button>Connexion</button>
+<form  
+ [formGroup]="loginForm"
+(ngSubmit)="onSubmit(loginForm.value)">
+
+    <h1>Connexion</h1>
+
+    <label>email :</label>
+    <input type="text" class="form-control"   [(ngModel)]="user.email" name="email" placeholder="email" #email="ngModel" required />
+
+    <label>password :</label>
+    <input type="password" class="form-control"  [(ngModel)]="user.password" name="password" placeholder="password" #password="ngModel" required />
+
+
+<input type="submit" value="connexion" class="btn btn-primary"/>
+
 </form>
 
-<p>Value: {{ form.value | json }}</p>
-<p>Validation status: {{ form.status }}</p>
+L'utilisateur s'appelle {{ user.email }} et son mdp est :  {{ user.password }}.
