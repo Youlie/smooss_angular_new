@@ -15,17 +15,13 @@ export class ProfileComponent implements OnInit {
   constructor(private formbuilder: FormBuilder, private smoossRest: SmoossRestService) { }
 
   ngOnInit() {
-    console.log("coucou");
     this.formulaire = this.formbuilder.group({
       email: this.formbuilder.control(""),
       firstName: this.formbuilder.control(""),
       lastName: this.formbuilder.control(""),
       nickName: this.formbuilder.control("")
     });
-    console.log("coucou2");
     this.smoossRest.getProfile(69).subscribe((af) => {
-      console.log(af);
-      debugger;
       this.formulaire.controls.email.setValue(af["email"]),
       this.formulaire.controls.firstName.setValue(af["firstName"]),
       this.formulaire.controls.lastName.setValue(af["lastName"]),
@@ -38,16 +34,4 @@ export class ProfileComponent implements OnInit {
       console.log(res);
     })
   }
-
-  // public setProfile(value) {
-  //   this.formulaire.value; 
-  //   // this.evenementChangeForm.emit(this.email)
-  //   // this.evenementChangeForm.emit(this.firstName)
-  // }
-  // public getProfile(){
-  //   this.email;
-  //   this.firstName;
-  //   this.lastName;
-  //   this.nickName;
-  // }
 }
