@@ -1,3 +1,58 @@
-<p>
-  event-detail works!
-</p>
+<div class="container-fluid event-container">
+  <div class="header-event">
+    <img class="img-event justify-content-center" src="https://cdn2.hubspot.net/hubfs/322787/Mychefcom/images/BLOG/Header-Blog/photo-culinaire-pexels.jpg">
+    
+    <div class="title-event">{{titleEvent}}</div>
+
+    <div class="description-event">
+      <i class="fas fa-quote-left fa-2x quote-left-description-event"></i>
+      <p class="paragraph-description-event">
+        {{paragraphDescriptionEvent}}
+      </p>
+      <i class="fas fa-quote-right fa-2x quote-right-description-event"></i>
+    </div>
+
+    <div class="attribute-event">
+      <table>
+        <tbody>
+          <td class="text-right" id="attributes-event">
+            <tr><span class="attributes-event">{{nbParticipantsEvent}} </span></tr>
+            <tr><span class="attributes-event">{{authorEvent}}</span></tr>
+            <tr><span class="attributes-event">{{timeEvent}}</span></tr>
+            <tr><span class="attributes-event">{{dateEvent}}</span></tr>
+          </td>
+          <td class="text-center ">
+            <tr><span class="fontawesome-event"><i class="fas fa-users fa-2x"></i></span></tr>
+            <tr><span class="fontawesome-event"><i class="fas fa-user-astronaut fa-2x"></i></span></tr>
+            <tr><span class="fontawesome-event"><i class="fas fa-clock fa-2x"></i></span></tr>
+            <tr><span class="fontawesome-event"><i class="fas fa-calendar-alt fa-2x"></i></span></tr>
+          </td>
+        </tbody>
+      </table>
+    </div>
+    <div class="modules-card">
+      <app-module-card></app-module-card>
+    </div>
+    <div class="map-event">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2890.227024418081!2d3.936526315857235!3d43.58098737912385!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12b6a52511713d93%3A0x71b7358dd33a7148!2sCapgemini!5e0!3m2!1sen!2sfr!4v1527776404217" width="1400" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+    </div>
+
+  </div>
+  
+  
+  <!-- <h5 class="card-day-event"> {{dayEvent}}</h5>
+  
+  <h6 class="card-month-event">{{monthEvent}}</h6>
+  
+  
+  <div class="card-right-side">
+    <h1 class="card-title-event">{{titleEvent}}</h1>
+
+    <p class="card-description-event">{{descriptionEvent}}</p>
+    <div class="card-participant-event">
+          <span *ngIf="participantEvent >= 2">Nb. participants : </span>
+          <span *ngIf="participantEvent == 1">Nb. participant : </span>
+          <span class="card-participant-number-event"> {{participantEvent}}</span></div>
+  </div>  -->
+
+</div>
