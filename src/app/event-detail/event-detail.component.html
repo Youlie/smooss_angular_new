@@ -18,9 +18,9 @@
           <td class="text-right" id="attributes-event">
             <tr><span class="attributes-event">{{nbParticipantsEvent}} </span></tr>
             <tr><span class="attributes-event">{{authorEvent}}</span></tr>
-            <tr><span class="attributes-event">{{timeEvent}}</span></tr>
-            <tr><span class="attributes-event">{{dateEvent}}</span></tr>
-          </td>
+            <tr><span class="attributes-event">{{dateStartEvent * 1000 | date : 'shortTime'}} -- {{dateEndEvent * 1000 | date : 'shortTime'}}</span></tr>
+            <tr><span class="attributes-event">{{dateStartEvent * 1000 | date : 'mediumDate' }} -- {{dateEndEvent * 1000 | date : 'mediumDate'}}</span></tr>
+          </td>          
           <td class="text-center ">
             <tr><span class="fontawesome-event"><i class="fas fa-users fa-2x"></i></span></tr>
             <tr><span class="fontawesome-event"><i class="fas fa-user-astronaut fa-2x"></i></span></tr>
@@ -33,9 +33,7 @@
     <div class="modules-card">
       <app-module-card></app-module-card>
     </div>
-    <div class="map-event">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2890.227024418081!2d3.936526315857235!3d43.58098737912385!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12b6a52511713d93%3A0x71b7358dd33a7148!2sCapgemini!5e0!3m2!1sen!2sfr!4v1527776404217" width="1400" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
-    </div>
+    <div class="map-event" #gmap></div>
 
   </div>
   
