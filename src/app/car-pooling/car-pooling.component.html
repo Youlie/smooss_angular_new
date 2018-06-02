@@ -1,10 +1,17 @@
 <div class="container">
   <div class="row">
-    
+
     <div class="col-md-12">
       <h4 id=titleCarPooling>Listes des covoiturages pour l'évènement du jj/mm/aaaa</h4>
+
+      <div>
+        <button id="addcarpool" type="button" data-toggle="modal" data-target="#exampleModal">
+          Add a new carpool
+        </button>
+      </div>
+      <br>
+
       <div class="table-responsive">
-       
         <table id="mytable" class="table table-bordred table-striped">
           <thead>
             <th>Driver</th>
@@ -48,6 +55,48 @@
 
       </div>
     </div>
+  </div>
+</div>
 
+<!-- Modal add new carpooling -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 id="exampleModalLabel">Add a new carpool</h5>
+      </div>
+      <div class="modal-body">
+        <label for="uname">Start Location </label>
+        <br>
+        <input type="text" id="startLocation" name="name" placeholder="Enter your start Location">>
+      </div>
+      <div class="modal-body">
+        <label for="uname">End Location </label>
+        <br>
+        <input type="text" id="endLocation" name="name" placeholder="Enter your end Location">>
+      </div>
+      <div class="modal-body">
+        <label for="uname">Depart time</label>
+        <br>
+        <input id="time" type="time">
+      </div>
+      <div class="modal-body">
+        <label for="uname">Return time</label>
+        <br>
+        <input id="time" type="time">
+      </div>
+      <div class="modal-body">
+        <label for="uname">Available aseats</label>
+        <br>
+        <input type="number" id="seats" name="name" placeholder="Enter your available seats">>
+
+      </div>
+
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+        <button type="button" class="btn btn-success">Add a new carpool</button>
+      </div>
+    </div>
   </div>
 </div>
