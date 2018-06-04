@@ -21,6 +21,7 @@ import { CguComponent } from './cgu/cgu.component';
 import { LoginComponent } from './login/login.component';
 import { CarPoolingComponent } from './car-pooling/car-pooling.component';
 import { ModuleCardComponent } from './module-card/module-card.component';
+import { CarPoolingEntryComponent } from './car-pooling-entry/car-pooling-entry.component';
 
 
 const appRoutes:Routes = [
@@ -57,7 +58,8 @@ const appRoutes:Routes = [
     CguComponent,
     LoginComponent,
     CarPoolingComponent,
-    ModuleCardComponent
+    ModuleCardComponent,
+    CarPoolingEntryComponent
   ],
   imports: [
     BrowserModule,
