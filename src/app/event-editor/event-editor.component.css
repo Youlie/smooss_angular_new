@@ -1,143 +1,174 @@
-/* @Author : Twikey  */
-
-/* css by youli >> */
-
-.color{
-    background-color:black;
-    color:#ffc107;
-    border-color: #ffc107;
-}
-/* css by youli  */
+/* @Author : youli */
 
 body {
-    background-color            : black;
-}
+    background-color                        : #444442;
+    padding-top                             : 85px;
+  }
 
+  h1 {
+    font-family                             : 'Poppins', sans-serif, 'arial';
+    font-weight                             : 600;
+    font-size                               : 72px;
+    color                                   : white;
+    text-align                              : center;
+  }
 
-#event_title_block {
-    /* border                      : 2px solid red; */
-}
-.img-title-description-event-block {
-	position 					: relative;
-	display						: flex;
-	justify-content 			: center;
-	align-content 				: center;
-	align-items 				: center;
-}
-.title-description-event {
-	position					: absolute;
-    display 					: flex;
-    flex-direction 				: column;
-    align-items 				: center;
-    /* align-self 					: end; */
-    margin-bottom 				: 1%;
+  h4 {
     
-}
-.input-event {
-	background					: transparent;
-	border 						: none;
-	border-bottom 				: 2px solid white;
-	color 						: white;
-	text-align 					: center;
-}
+    font-family                             : 'Roboto', sans-serif, 'arial';
+    font-weight                             : 400;
+    font-size                               : 20px;
+    color                                   : #9b9b9b;
+    line-height                             : 1.5;
+  }
 
-#module_block {
-    /* border                      : 2px solid green; */
-}
+  /* ///// inputs /////*/
 
-/* Start__@Author : Youli*/ 
-#imgParty { 
-    width                       : 100% !important;
-    min-width                   : 100% !important;
-}
+  input:focus~label,
+  textarea:focus~label,
+  input:valid~label,
+  textarea:valid~label {
+    font-size                               : 0.75em;
+    color                                   : #999;
+    top                                     : -5px;
+    -webkit-transition                      : all 0.225s ease;
+    transition                              : all 0.225s ease;
+  }
 
-.Style5 {
-    position                    : absolute;
-    left                        : 38%;
-    top                         : 35%;
-    font-size                   : 36px;
-    color                       : #fff;
-}
+  .styled-input {
+    float                                   : left;
+    width                                   : 293px;
+    margin                                  : 1rem 0;
+    position                                : relative;
+    border-radius                           : 4px;
+  }
 
-.event-info {
-    color                       : #fff;
-    
-    display 					: flex;
-}
-/*End__@Author : Youli */
+  @media only screen and (max-width         : 768px) {
+    .styled-input {
+      width                                 : 100%;
+    }
+  }
 
-.modules_blocks {
-    border                      : 2px solid salmon;
-    height                      : 200px;
-    cursor                      : pointer;
-    background-color            : #673ab7;
-}
+  .styled-input label {
+    color                                   : #999;
+    padding                                 : 1.3rem 30px 1rem 30px;
+    position                                : absolute;
+    top                                     : 10px;
+    left                                    : 0;
+    -webkit-transition                      : all 0.25s ease;
+    transition                              : all 0.25s ease;
+    pointer-events                          : none;
+  }
 
-.map_img {
-    height                      : 300px;
-    width                       : auto;
-}
+  .styled-input label i {
+    color                                   : rgb(251, 163, 0);
+  }
 
-.color_text {
-    color                       : white;
-}
+  .styled-input.wide {
+    width                                   : 650px;
+    max-width                               : 100%;
+  }
 
-.center_icon_test {
-    display                     : flex !important;
-    justify-content             : center;
-    align-items                 : center;
-    margin-right                : 5%;
-    margin-top                  : 5%;
-    cursor                      : pointer;
-}
+  input,
+  textarea {
+    padding                                 : 30px;
+    border                                  : 0;
+    width                                   : 100%;
+    font-size                               : 1rem;
+    background-color                        : #2d2d2d;
+    color                                   : white;
+    border-radius                           : 4px;
+  }
 
-.center_icon_test:hover {
-    opacity                     : 0.2;
-}
+  input:focus,
+  textarea:focus {
+    outline                                 : 0;
+  }
 
+  input:focus~span,
+  textarea:focus~span {
+    width                                   : 100%;
+    -webkit-transition                      : all 0.075s ease;
+    transition                              : all 0.075s ease;
+  }
 
-.hexagon_module {
-    position                    : relative;
-    width                       : 200px; 
-    height                      : 115.47px;
-    background-color            : #673ab7;
-    margin                      : 57.74px 0;
-}
+  textarea {
+    width                                   : 100%;
+    min-height                              : 15em;
+  }
+
+  .input-container {
+    width                                   : 650px;
+    max-width                               : 100%;
+    margin                                  : 20px auto 25px auto;
+  }
+
+  .submit-btn {
+    float                                   : right;
+    padding                                 : 7px 35px;
+    border-radius                           : 60px;
+    display                                 : inline-block;
+    background-color                        : orange;
+    color                                   : white;
+    font-size                               : 18px;
+    cursor                                  : pointer;
+    box-shadow                              : 0 2px 5px 0 rgba(0, 0, 0, 0.06),
+    0 2px 10px 0 rgba(0, 0, 0, 0.07);
+    -webkit-transition                      : all 300ms ease;
+    transition                              : all 300ms ease;
+  }
+
+  .submit-btn:hover {
+    transform                               : translateY(1px);
+    box-shadow                              : 0 1px 1px 0 rgba(0, 0, 0, 0.10),
+    0 1px 1px 0 rgba(0, 0, 0, 0.09);
+  }
+
+  @media (max-width: 768px) {
+    .submit-btn {
+      width                                 : 100%;
+      float                                 : none;
+      text-align                            : center;
+    }
+  }
+
+  input[type=checkbox]+label {
+    color                                   : #ccc;
+    font-style                              : italic;
+  }
+
+  input[type=checkbox]:checked+label {
+    color                                   : #f00;
+    font-style                              : normal;
+  }
+
+  /* btn upload >> */
+
+  ::-webkit-file-upload-button {
+    background                              : #444442;
+    color                                   : #fff;
+    padding                                 : 10px;
+    border-radius                           : 2px;
+    border-color                            : #444442;
+    margin-left                             : -26px;
   
-.hexagon_module:before,
-.hexagon_module:after {
-    content                     : "";
-    position                    : absolute;
-    width                       : 0;
-    border-left                 : 100px solid transparent;
-    border-right                : 100px solid transparent;
-}
-  
-.hexagon_module:before {
-    bottom                      : 100%;
-    border-bottom               : 57.74px solid #673ab7;
+  }
+ 
+/* css pour la sécurité du formulaire >> */
+
+.errors {
+	display                                   : none;
 }
 
-.hexagon_module:after {
-    top                         : 100%;
-    width                       : 0;
-    border-top                  : 57.74px solid #673ab7;
+.submitted-form .errors {
+	display                                   : block;
 }
 
-.hexagon_module a {
-    text-decoration             : none;
-    color                       : white;
+.errors {
+	color                                     : red;
+	font-style                                : italic;
 }
 
-#button_redirect_home {
-    background-color            : #ffc107;
-    color                       : white;
-    text-decoration             : none;
-    width                       : 200px;
-    height                      : 35px;
-    border-radius               : 5px;
-    display                     : flex;
-    justify-content             : center;
-    align-items                 : center;
-    font-weight                 : bold;
-}
+.ng-valid { border-color                    : green; }
+.ng-invalid { border-color                  : red; }   
+

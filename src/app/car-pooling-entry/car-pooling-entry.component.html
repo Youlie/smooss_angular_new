@@ -1,0 +1,46 @@
+<table *ngIf="this.size < 1; else other_tr" id="mytable" class="table table-bordred table-striped">
+    <!-- <tr *ngIf="angular.element('#driverTh').length; else other_tr"> -->
+      <thead >
+          <tr>
+              <!-- <th id="driverTh">Driver</th> -->
+              <th>Driver</th>
+              <th>Start Location</th>
+              <th>End Location</th>
+              <th>Depart Time</th>
+              <th>Return Time</th>
+              <th>Available Seats</th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr>
+              <td>{{driver}}</td>
+              <td>{{startLocation}}</td>
+              <td>{{endLocation}}</td>
+              <td>{{startTime}}</td>
+              <td>{{endTime}}</td>
+              <td>{{nbSeats}}</td>
+            </tr>
+      </tbody>
+</table>
+
+<ng-template #other_tr>
+
+    <tbody>
+        <tr>
+            <td>{{driver}}</td>
+            <td>{{startLocation}}</td>
+            <td>{{endLocation}}</td>
+            <td>{{startTime}}</td>
+            <td>{{endTime}}</td>
+            <td>{{nbSeats}}</td>
+          </tr>
+    </tbody>
+
+</ng-template>
+
+<!-- [driver]="carpool.driver.firstName"
+[startLocation]"carpool.startLocation"
+[endLocation]="carpool.endLocation"
+[startTime]="carpool.departureTime"
+[endTime]="carpool.returnTime"
+[nbSeats]="carpool.seats" -->

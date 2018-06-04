@@ -3,7 +3,19 @@
     text-align: center
 }
 
-#mytable{
+
+
+#exampleModalLabel{
+    color:black;
     text-align: center;
-    background-color: rgb(63, 56, 62);
+}
+
+label{
+    color: black;
+}
+
+#addcarpool{
+    background-color: #FCA311;
+    border: #FCA311;
+    border-radius: 10px;    
 }

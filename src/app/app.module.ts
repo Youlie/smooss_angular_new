@@ -18,8 +18,10 @@ import { LogoutComponent } from './logout/logout.component';
 import { HomeRedirectComponent } from './home-redirect/home-redirect.component';
 import { PictureModuleComponent } from './picture-module/picture-module.component';
 import { CguComponent } from './cgu/cgu.component';
+import { LoginComponent } from './login/login.component';
 import { CarPoolingComponent } from './car-pooling/car-pooling.component';
 import { ModuleCardComponent } from './module-card/module-card.component';
+import { CarPoolingEntryComponent } from './car-pooling-entry/car-pooling-entry.component';
 
 
 const appRoutes:Routes = [
@@ -30,6 +32,7 @@ const appRoutes:Routes = [
   { path:"event/create", component:EventEditorComponent },
   { path:"event/:id/edit", component:EventEditorComponent },
   { path:"event/:id", component:EventDetailComponent },
+  { path:"login", component:LoginComponent},
   {path:"cgu",component:CguComponent},
   {path:"carpooling", component:CarPoolingComponent},
   {path:"pictureModule",component:PictureModuleComponent},
@@ -53,8 +56,10 @@ const appRoutes:Routes = [
     HomeRedirectComponent,
     PictureModuleComponent,
     CguComponent,
+    LoginComponent,
     CarPoolingComponent,
-    ModuleCardComponent
+    ModuleCardComponent,
+    CarPoolingEntryComponent
   ],
   imports: [
     BrowserModule,
