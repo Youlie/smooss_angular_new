@@ -94,6 +94,7 @@ export class SmoossRestService {
   getSingleEvent(id: number) {
     return this.http.get(this.SERVER_URL2 + "/events/" + id);
   }
+
   login(email, password) {
     let json = JSON.stringify({
       email: email,
@@ -109,4 +110,24 @@ export class SmoossRestService {
     console.log(json);
     return this.http.post(this.SERVER_URL + '/user/login', json, httpOptions);
   }
+
+  getCarPoolings(id: number){
+    return this.http.get(this.SERVER_URL + "carpooling/event/" + id);
+  }
+
+  addCarPooling(id: number){
+    let json = JSON.stringify({
+     
+    })
+
+    const httpOptions = {
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json'
+      })
+    };
+
+    console.log(json);
+    return this.http.post(this.SERVER_URL + 'carpooling/create', json, httpOptions);
+  }
+
 }
