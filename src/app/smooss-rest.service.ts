@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 
+
 @Injectable({
   providedIn: 'root'
 })
@@ -88,7 +89,7 @@ export class SmoossRestService {
       })
     };
 
-    return this.http.post(this.SERVER_URL2 + "/user/create", param, httpOptions);
+    return this.http.post(this.SERVER_URL + "/user/create", param, httpOptions);
   }
 
   getSingleEvent(id: number) {
