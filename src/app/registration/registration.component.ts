@@ -2,15 +2,18 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators }from '@angular/forms';
 import { PasswordValidator } from './password-validator';
 import { SmoossRestService } from '../smooss-rest.service';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-registration',
   templateUrl: './registration.component.html',
   styleUrls: ['./registration.component.css'],
+  
 })
 export class RegistrationComponent implements OnInit {
 
-  constructor(private formbuilder:FormBuilder, private rs:SmoossRestService) { }
+  constructor(private formbuilder:FormBuilder, private rs:SmoossRestService, private router: Router) { }
 
   public userForm;
 
@@ -45,7 +48,7 @@ export class RegistrationComponent implements OnInit {
   public soumetUserForm(valeur) {
     if (this.userForm.status=="INVALID") {
       this.hasBeenSubmitted = true;
-      // return;
+      
     }
     else{
       this.firstname=valeur.firstname;
@@ -55,50 +58,22 @@ export class RegistrationComponent implements OnInit {
       this.password=valeur.password;
       this.AskForNewUser();
     }
-    // envoi vers le serveur
 }
 
 AskForNewUser() {
   this.rs.createNewUser(this.lastname, this.firstname, this.nickname, this.email, this.password, this.picture).subscribe(res => {
     console.log('ok !');
     console.log(res);
-    return "/home";
+    this.router.navigate(['home']);
+
   },
   res => {
     console.log('ko !');
-    console.log(res);
-    return "/login";
+    console.log(res.status);
+
   }
 );
-
+}
 }
 
-// AskForNewUser() {
-//   this.SmoossRestService.createNewUser(lastname, firstname, nickname, email, password).subscribe()
-// }
 
-// @PostMapping(value="/registration")
-// 	public String registration(("userForm"))
-// 			throws EmailException {
-
-// 		userValidator.validate(userForm, bindingResult);
-		
-// 		if (bindingResult.hasErrors()) {
-// 			return "registration";
-// 		}
-		
-// 		us.create(userForm);
-// 		es.sendMail(userForm.getEmail(), "contact@smooss.fr", "Bonjour "+userForm.getFirstName()+" !", "Bienvenue sur Smooss "+userForm.getFirstName()+
-// 				" ! Nous sommes heureux de vous compter parmi nos membres ! A très vite sur www.smooss.fr");
-
-// 		//TODO auto login !!!
-// 		return "redirect:home";
-// 	}
-
-// fonctionCheck(valeurutile) {
-//     public get value(lastname, firstname, nickname, email, password) {
-//       return null;
-//     };
-//   }
-
-}
