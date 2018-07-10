@@ -3,6 +3,8 @@ import { NgModule, LOCALE_ID } from '@angular/core';
 import { RouterModule, Routes} from '@angular/router';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import localeFr from '@angular/common/locales/fr';
+registerLocaleData(localeFr);
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
@@ -21,6 +23,7 @@ import { CguComponent } from './cgu/cgu.component';
 import { LoginComponent } from './login/login.component';
 import { CarPoolingComponent } from './car-pooling/car-pooling.component';
 import { ModuleCardComponent } from './module-card/module-card.component';
+import { registerLocaleData } from '@angular/common';
 
 
 const appRoutes:Routes = [
@@ -32,9 +35,9 @@ const appRoutes:Routes = [
   { path:"event/:id/edit", component:EventEditorComponent },
   { path:"event/:id", component:EventDetailComponent },
   { path:"login", component:LoginComponent},
-  {path:"cgu",component:CguComponent},
-  {path:"carpooling", component:CarPoolingComponent},
-  {path:"pictureModule",component:PictureModuleComponent},
+  { path:"cgu",component:CguComponent},
+  { path:"carpooling", component:CarPoolingComponent},
+  { path:"pictureModule",component:PictureModuleComponent},
   { path:"", pathMatch:'full', redirectTo:"home" }
   
 ]

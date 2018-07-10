@@ -14,7 +14,7 @@ export class EventManagerComponent implements OnInit {
   constructor(private smoossRestService : SmoossRestService) { }
 
   ngOnInit() {
-    this.smoossRestService.getlistEventsByUserId(2).subscribe( res => {
+    this.smoossRestService.getlistEventsByUserId(1).subscribe( res => {
       this.resultat = res;
       for (let element of this.resultat) {
         this.listCardsEvent.push(element);

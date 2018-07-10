@@ -28,7 +28,7 @@ export class SmoossRestService {
   }
 
   getlistEventsByUserId(id: number) {
-    return this.http.get(this.SERVER_URL2 + "/events/user/" + id);
+    return this.http.get(this.SERVER_URL + "/events/user/" + id);
   }
 
   setProfile(id, email, firstName, lastName, nickName) {
@@ -92,7 +92,7 @@ export class SmoossRestService {
   }
 
   getSingleEvent(id: number) {
-    return this.http.get(this.SERVER_URL2 + "/events/" + id);
+    return this.http.get(this.SERVER_URL + "/events/" + id);
   }
   login(email, password) {
     let json = JSON.stringify({

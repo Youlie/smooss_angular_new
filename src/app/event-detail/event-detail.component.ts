@@ -1,5 +1,6 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit, ViewChild, LOCALE_ID } from '@angular/core';
 import { SmoossRestService } from '../smooss-rest.service';
+
 import { } from '@types/googlemaps';
 
 @Component({
@@ -15,11 +16,10 @@ export class EventDetailComponent implements OnInit {
   private titleEvent : string;
   private dateStartEvent;
   private dateEndEvent;
-  private timeEvent : string = " 12h12 -- 20h12";
   private authorEvent : string;
   private nbParticipantsEvent : number = 12;
   private resultat;
-  private addressEvent;
+  private addressEvent : string;
   private geocoder;
 
   constructor(private smoossRestService : SmoossRestService) { }
@@ -27,13 +27,13 @@ export class EventDetailComponent implements OnInit {
   ngOnInit() { 
     this.geocoder = new google.maps.Geocoder();
     var mapProp = {
-      center: new google.maps.LatLng(53.3496, -6.3263),
+      center: new google.maps.LatLng(43.6108, -3.8767),
       zoom: 15,
       mapTypeId: google.maps.MapTypeId.ROADMAP
     };
     this.map = new google.maps.Map(this.gmapElement.nativeElement, mapProp);
 
-    this.smoossRestService.getSingleEvent(4).subscribe( res => {
+    this.smoossRestService.getSingleEvent(1).subscribe( res => {
       this.resultat                   = res;
       this.titleEvent                 = res['name'];
       this.paragraphDescriptionEvent  = res['description'];

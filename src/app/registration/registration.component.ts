@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators }from '@angular/forms';
 import { PasswordValidator } from './password-validator';
 import { SmoossRestService } from '../smooss-rest.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-registration',
@@ -10,7 +11,7 @@ import { SmoossRestService } from '../smooss-rest.service';
 })
 export class RegistrationComponent implements OnInit {
 
-  constructor(private formbuilder:FormBuilder, private rs:SmoossRestService) { }
+  constructor(private formbuilder:FormBuilder, private rs:SmoossRestService, private router: Router) { }
 
   public userForm;
 
@@ -58,19 +59,14 @@ export class RegistrationComponent implements OnInit {
     // envoi vers le serveur
 }
 
-AskForNewUser() {
-  this.rs.createNewUser(this.lastname, this.firstname, this.nickname, this.email, this.password, this.picture).subscribe(res => {
-    console.log('ok !');
-    console.log(res);
-    return "/home";
-  },
-  res => {
-    console.log('ko !');
-    console.log(res);
-    return "/login";
+  AskForNewUser() {
+    this.rs.createNewUser(this.lastname, this.firstname, this.nickname, this.email, this.password, this.picture).subscribe(res => {
+      console.log('ok !');
+      console.log(res);
+    }, (error) => {
+      console.log('ko !');
+      this.router.navigate(['/home']);
+    });
   }
-);
-
-}
 
 }
